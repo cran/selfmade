@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="selective-inference-for-linear-mixed-and-additive-models">Selective Inference for Linear Mixed and Additive Models</h1>
+<p>David Rügamer 2021-04-13</p>
+<h2 id="objective">Objective</h2>
+<p>This vignette describes the generic use of the <code>selfmade</code> software to produce valid post-selection inference, or more specifically <em>selective inference</em>, for linear mixed and additive models after any type of variable selection mechanism, which can be repeated in a bootstrap-like manner.</p>
+<h3 id="references">References</h3>
+<p>Rügamer, D., &amp; Greven, S. (2018). Selective inference after likelihood-or test-based model selection in linear models. Statistics &amp; Probability Letters, 140, 7-12.</p>
+<p>Rügamer, D., &amp; Greven, S. (2020). Inference for (L_2)-Boosting. Statistics and Computing, 30(2), 279-289.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>The framework assumes that covariates in all models are fixed.</li>
+<li>It must be possible to fit the final model with the <code>gamm4</code> function of the eponymous R package. Support for models from <code>mgcv</code> will be added in the future.</li>
+<li>It must be possible to define a <strong>deterministic</strong> function of a vector (y \in \mathbb{R}^n) (referred to as <code>selection_function</code> in the following) determining the selection result for which the practioner seeks valid inference statements. In other words, the user has to define a function similar to the function <code>selection_function</code> defined below, which is deterministic in the sense that for the same input <code>y</code> the output should also be exactly the same.</li>
+<li>It must be possible to define a function, which checks the congruency of the result of the <code>selection_function</code> and the original selection given when performing model selection on the original data (y). This is usually trivial and just a wrapper for the <code>selection_function</code>.</li>
+</ul>
+<!-- end list -->
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">selection_function &lt;-<span class="st"> </span><span class="cf">function</span>(y)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">{</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  </a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  <span class="co"># based on any input y of the same dimension as the original response</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="co"># a model is selected and mapped to an integer value</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="co"># ....</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">  best_model_index &lt;-<span class="st"> </span><span class="kw">get_best_model</span>(list_of_models)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">  </a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">  <span class="kw">return</span>(best_model_index)</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">  </a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">}</a></code></pre></div>
+<p>Note that the <code>selection_function</code> should return the original result when called with the original data vector (y).</p>
+<h2 id="approach">Approach</h2>
+<ol>
+<li>Run the experiment with the <code>original_response</code></li>
+<li>Save the model selection result (e.g., as integer indicating the selected model) as well as the final model <code>final_model</code> (after refitting the model with <code>gamm4</code> if a different package has been used for model selection)</li>
+<li>Define the model selection function (<code>selection_function</code>)</li>
+<li>Define the wrapper (<code>check_congruency</code>) function returning a logical value whether the result of any model call of <code>selection_function</code> is equivalent to the original model selection result</li>
+<li>Run the <code>mocasin</code>-function providing selective inference as follows:</li>
+</ol>
+<!-- end list -->
+
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">res &lt;-<span class="st"> </span><span class="kw">mocasin</span>(<span class="dt">mod =</span> final_model,</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">               <span class="dt">checkFun =</span> check_congruency,</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">               <span class="dt">this_y =</span> original_response</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">               <span class="co"># further options</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">               )</a></code></pre></div>
+<h2 id="examples">Examples</h2>
+<ul>
+<li>Example 1 demonstrates the package’s ability to reproduce classical inference if no model selection was done.</li>
+<li>Example 2 demonstrates the use of the package for model selection with only <code>gamm4</code> models</li>
+<li>Example 3 demonstrates the package’s ability to calculate valid inference regardless of the type of model selection and packages involved (as long as the prerequisites are met)</li>
+</ul>
+<h3 id="example-1">Example 1</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(selfmade)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">library</span>(gamm4)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">set.seed</span>(<span class="dv">0</span>)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">dat &lt;-<span class="st"> </span><span class="kw">gamSim</span>(<span class="dv">1</span>,<span class="dt">n=</span><span class="dv">500</span>,<span class="dt">scale=</span><span class="dv">2</span>) <span class="co">## simulate 4 term additive truth</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">dat<span class="op">$</span>y &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">+</span><span class="st"> </span>dat<span class="op">$</span>x0<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dt">n=</span><span class="dv">500</span>)</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">br &lt;-<span class="st"> </span><span class="kw">gamm4</span>(y<span class="op">~</span><span class="st"> </span><span class="kw">s</span>(x0) <span class="op">+</span><span class="st"> </span><span class="kw">s</span>(x1), <span class="dt">data =</span> dat)</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="kw">summary</span>(br<span class="op">$</span>gam) <span class="co">## summary of gam</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co"># do not use any selection</span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co"># - hence it's not necessary to define selection_function</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#   and the checl_congruency always returns TRUE</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">checkFun &lt;-<span class="st"> </span><span class="cf">function</span>(yb) <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co"># calculate selective inference, which, in this case,</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co"># except for an approximation error, should be equivalent</span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co"># to the unconditional inference</span></a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">res &lt;-<span class="st"> </span><span class="kw">mocasin</span>(br, <span class="dt">this_y =</span> dat<span class="op">$</span>y,</a>
+<a class="sourceLine" id="cb3-19" data-line-number="19">               <span class="dt">checkFun =</span> checkFun,</a>
+<a class="sourceLine" id="cb3-20" data-line-number="20">               <span class="dt">nrlocs =</span> <span class="kw">c</span>(<span class="fl">0.7</span>,<span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb3-21" data-line-number="21">               <span class="dt">nrSamples =</span> <span class="dv">1000</span>, <span class="dt">trace =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co"># we get very similar results using</span></a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="kw">do.call</span>(<span class="st">&quot;rbind&quot;</span>, res<span class="op">$</span>selinf)</a></code></pre></div>
+<h3 id="example-2">Example 2</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">library</span>(selfmade)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">library</span>(lme4)</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw">library</span>(lmerTest)</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co"># use the ham data and use scaled information liking</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co"># as response</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">ham<span class="op">$</span>Informed.liking &lt;-<span class="st"> </span><span class="kw">scale</span>(ham<span class="op">$</span>Informed.liking)</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co"># We first define a function to fit a model based on response</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co"># This function is usually not required but can be </span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co"># specified in order to define the selection_function</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co"># as a function of the model instead of as a function</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co"># of the response vector</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">modFun &lt;-<span class="st"> </span><span class="cf">function</span>(y)</a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">{</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15">  ham<span class="op">$</span>y &lt;-<span class="st"> </span>y</a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">  <span class="kw">lmer</span>(y <span class="op">~</span><span class="st"> </span>Gender <span class="op">+</span><span class="st"> </span>Information <span class="op">*</span><span class="st"> </span>Product <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>Consumer) <span class="op">+</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="st">  </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>Product), <span class="dt">data=</span>ham)</a>
+<a class="sourceLine" id="cb4-18" data-line-number="18">  </a>
+<a class="sourceLine" id="cb4-19" data-line-number="19">  }</a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co"># define the selection_function:</span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co"># here this is done as function of a model</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co"># which, in combination with modFun, can then</span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co"># be used as function </span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25">selFun &lt;-<span class="st"> </span><span class="cf">function</span>(mod) <span class="kw">step</span>(mod, <span class="dt">reduce.fixed =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb4-26" data-line-number="26"></a>
+<a class="sourceLine" id="cb4-27" data-line-number="27"><span class="co"># define a function which extracts the results </span></a>
+<a class="sourceLine" id="cb4-28" data-line-number="28"><span class="co"># of the selection procedure</span></a>
+<a class="sourceLine" id="cb4-29" data-line-number="29">extractSelFun &lt;-<span class="st"> </span><span class="cf">function</span>(this_mod){</a>
+<a class="sourceLine" id="cb4-30" data-line-number="30"></a>
+<a class="sourceLine" id="cb4-31" data-line-number="31">this_mod &lt;-<span class="st"> </span><span class="kw">attr</span>(this_mod, <span class="st">&quot;model&quot;</span>)</a>
+<a class="sourceLine" id="cb4-32" data-line-number="32"><span class="cf">if</span>(<span class="kw">class</span>(this_mod)<span class="op">==</span><span class="st">&quot;lm&quot;</span>) </a>
+<a class="sourceLine" id="cb4-33" data-line-number="33">  <span class="kw">return</span>(<span class="kw">attr</span>(this_mod<span class="op">$</span>coefficients, <span class="st">&quot;names&quot;</span>)) <span class="cf">else</span></a>
+<a class="sourceLine" id="cb4-34" data-line-number="34">    <span class="kw">return</span>(<span class="kw">c</span>(<span class="kw">names</span>(<span class="kw">fixef</span>(this_mod)), </a>
+<a class="sourceLine" id="cb4-35" data-line-number="35">             <span class="kw">names</span>(<span class="kw">getME</span>(this_mod, <span class="st">&quot;theta&quot;</span>))))</a>
+<a class="sourceLine" id="cb4-36" data-line-number="36"></a>
+<a class="sourceLine" id="cb4-37" data-line-number="37">}</a>
+<a class="sourceLine" id="cb4-38" data-line-number="38"></a>
+<a class="sourceLine" id="cb4-39" data-line-number="39"><span class="co"># Now we run the initial model selection on the </span></a>
+<a class="sourceLine" id="cb4-40" data-line-number="40"><span class="co"># orginal data, which is a </span></a>
+<a class="sourceLine" id="cb4-41" data-line-number="41"><span class="co"># backward elimination of non-significant effects:</span></a>
+<a class="sourceLine" id="cb4-42" data-line-number="42">(step_result &lt;-<span class="st"> </span><span class="kw">selFun</span>(<span class="kw">modFun</span>(ham<span class="op">$</span>Informed.liking)))</a>
+<a class="sourceLine" id="cb4-43" data-line-number="43"><span class="kw">attr</span>(step_result, <span class="st">&quot;model&quot;</span>)</a>
+<a class="sourceLine" id="cb4-44" data-line-number="44"><span class="co"># Elimination tables for random- and fixed-effect terms:</span></a>
+<a class="sourceLine" id="cb4-45" data-line-number="45">(sel &lt;-<span class="st"> </span><span class="kw">extractSelFun</span>(step_result))</a>
+<a class="sourceLine" id="cb4-46" data-line-number="46"></a>
+<a class="sourceLine" id="cb4-47" data-line-number="47"><span class="co"># Now we can define the function checking the congruency</span></a>
+<a class="sourceLine" id="cb4-48" data-line-number="48"><span class="co"># with the original selection</span></a>
+<a class="sourceLine" id="cb4-49" data-line-number="49">checkFun &lt;-<span class="st"> </span><span class="cf">function</span>(yb){ </a>
+<a class="sourceLine" id="cb4-50" data-line-number="50"></a>
+<a class="sourceLine" id="cb4-51" data-line-number="51"> this_mod &lt;-<span class="st"> </span><span class="kw">modFun</span>(yb)</a>
+<a class="sourceLine" id="cb4-52" data-line-number="52"> <span class="kw">setequal</span>( <span class="kw">extractSelFun</span>(<span class="kw">selFun</span>(this_mod)), sel )</a>
+<a class="sourceLine" id="cb4-53" data-line-number="53"> </a>
+<a class="sourceLine" id="cb4-54" data-line-number="54"> }</a>
+<a class="sourceLine" id="cb4-55" data-line-number="55"></a>
+<a class="sourceLine" id="cb4-56" data-line-number="56"><span class="co"># and compute valid p-values conditional on the selection</span></a>
+<a class="sourceLine" id="cb4-57" data-line-number="57"><span class="co"># (this takes some time and will produce a lot of warnings)</span></a>
+<a class="sourceLine" id="cb4-58" data-line-number="58">res &lt;-<span class="st"> </span><span class="kw">mocasin</span>(<span class="kw">attr</span>(step_result, <span class="st">&quot;model&quot;</span>), <span class="dt">this_y =</span> ham<span class="op">$</span>Informed.liking,</a>
+<a class="sourceLine" id="cb4-59" data-line-number="59">          <span class="dt">checkFun =</span> checkFun, <span class="dt">which =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>, <span class="dt">nrSamples =</span> <span class="dv">50</span>, <span class="dt">trace =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb4-60" data-line-number="60"></a>
+<a class="sourceLine" id="cb4-61" data-line-number="61"><span class="kw">print</span>(res)</a></code></pre></div>
+<h3 id="example-3">Example 3</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co"># Run an AIC comparison between different additive models </span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co"># fitted with mgcv::gam</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw">library</span>(selfmade)</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="kw">library</span>(mgcv)</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="kw">library</span>(gamm4)</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co"># create data and models</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="kw">set.seed</span>(<span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co"># use enough noise to get a diverse model selection</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">dat &lt;-<span class="st"> </span><span class="kw">gamSim</span>(<span class="dv">1</span>,<span class="dt">n=</span><span class="dv">400</span>,<span class="dt">dist=</span><span class="st">&quot;normal&quot;</span>,<span class="dt">scale=</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">b0123 &lt;-<span class="st"> </span><span class="kw">gam</span>(y<span class="op">~</span><span class="kw">s</span>(x0)<span class="op">+</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x2)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat)</a>
+<a class="sourceLine" id="cb5-12" data-line-number="12">b123 &lt;-<span class="st"> </span><span class="kw">gam</span>(y<span class="op">~</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x2)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat)</a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">b013 &lt;-<span class="st"> </span><span class="kw">gam</span>(y<span class="op">~</span><span class="kw">s</span>(x0)<span class="op">+</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat)</a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co"># seems that the second model seems to be the most </span></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co"># 'appropriate' one</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="kw">which.min</span>(<span class="kw">AIC</span>(b0123, b123, b013)<span class="op">$</span>AIC)</a>
+<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co"># and refit the model with gamm4</span></a>
+<a class="sourceLine" id="cb5-19" data-line-number="19">b123_gamm4 &lt;-<span class="st"> </span><span class="kw">gamm4</span>(y<span class="op">~</span><span class="kw">s</span>(x0)<span class="op">+</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat)</a>
+<a class="sourceLine" id="cb5-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb5-21" data-line-number="21"><span class="co"># define selection_function</span></a>
+<a class="sourceLine" id="cb5-22" data-line-number="22">selection_function &lt;-<span class="st"> </span><span class="cf">function</span>(y)</a>
+<a class="sourceLine" id="cb5-23" data-line-number="23">{</a>
+<a class="sourceLine" id="cb5-24" data-line-number="24">  </a>
+<a class="sourceLine" id="cb5-25" data-line-number="25">  dat<span class="op">$</span>y &lt;-<span class="st"> </span>y</a>
+<a class="sourceLine" id="cb5-26" data-line-number="26">  list_of_models &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb5-27" data-line-number="27">    <span class="kw">gam</span>(y<span class="op">~</span><span class="kw">s</span>(x0)<span class="op">+</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x2)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat),</a>
+<a class="sourceLine" id="cb5-28" data-line-number="28">    <span class="kw">gam</span>(y<span class="op">~</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x2)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat),</a>
+<a class="sourceLine" id="cb5-29" data-line-number="29">    <span class="kw">gam</span>(y<span class="op">~</span><span class="kw">s</span>(x0)<span class="op">+</span><span class="kw">s</span>(x1)<span class="op">+</span><span class="kw">s</span>(x3),<span class="dt">data=</span>dat)</a>
+<a class="sourceLine" id="cb5-30" data-line-number="30">  )</a>
+<a class="sourceLine" id="cb5-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb5-32" data-line-number="32">  <span class="co"># return an integer value which model is best</span></a>
+<a class="sourceLine" id="cb5-33" data-line-number="33">  <span class="kw">return</span>(</a>
+<a class="sourceLine" id="cb5-34" data-line-number="34">    <span class="kw">which.min</span>(<span class="kw">sapply</span>(list_of_models, AIC))</a>
+<a class="sourceLine" id="cb5-35" data-line-number="35">  )</a>
+<a class="sourceLine" id="cb5-36" data-line-number="36">  </a>
+<a class="sourceLine" id="cb5-37" data-line-number="37">}</a>
+<a class="sourceLine" id="cb5-38" data-line-number="38"></a>
+<a class="sourceLine" id="cb5-39" data-line-number="39"><span class="co"># define the congruency function</span></a>
+<a class="sourceLine" id="cb5-40" data-line-number="40">checkFun &lt;-<span class="st"> </span><span class="cf">function</span>(y) <span class="kw">selection_function</span>(y)<span class="op">==</span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb5-41" data-line-number="41"></a>
+<a class="sourceLine" id="cb5-42" data-line-number="42"><span class="co"># compute inference</span></a>
+<a class="sourceLine" id="cb5-43" data-line-number="43">res &lt;-<span class="st"> </span><span class="kw">mocasin</span>(<span class="dt">mod =</span> b123_gamm4,</a>
+<a class="sourceLine" id="cb5-44" data-line-number="44">               <span class="dt">checkFun =</span> checkFun,</a>
+<a class="sourceLine" id="cb5-45" data-line-number="45">               <span class="dt">nrlocs =</span> <span class="dv">3</span>, <span class="co"># test one position of the spline</span></a>
+<a class="sourceLine" id="cb5-46" data-line-number="46">               <span class="dt">nrSamples =</span> <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb5-47" data-line-number="47"><span class="kw">print</span>(res)</a></code></pre></div>
+
+</body>
+</html>

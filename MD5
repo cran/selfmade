@@ -1,0 +1,14 @@
+ce4ea4e5d2f24ac4c7285e99d0191957 *DESCRIPTION
+ca116ac71308b6e5c87070deecd40425 *NAMESPACE
+582195885640785779c6aedd80cc6f6a *R/helper_functions.R
+f3d593f22cede63487ebf73e5c4d91d3 *R/main_functions.R
+00b08900d0ed9d1df29196dd39a787b2 *R/sampling_functions.R
+0c88fb57efd834f38b6916ae0e97e910 *R/selfmade.R
+a8cbe0cd9284493b33c21a9526140de5 *R/testvector_functions.R
+742574608be46d67c8bcad13b217a363 *build/vignette.rds
+da18d1cdb297cd3f7e066495451088e0 *inst/doc/selfmade_generic.R
+8f8f0454c27d2f4baca157dbae8527d3 *inst/doc/selfmade_generic.Rmd
+3db3363d81386064c44ac5b51479a71b *inst/doc/selfmade_generic.html
+cb5559043a9bee583c2cb5fed8eb51fc *man/methodsSelfmade.Rd
+32de01ba24557352ab6a2e394e5d4fe4 *man/mocasin.Rd
+8f8f0454c27d2f4baca157dbae8527d3 *vignettes/selfmade_generic.Rmd
